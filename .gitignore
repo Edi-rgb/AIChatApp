@@ -1,2 +1,6 @@
 python-env/
-root/__pycache__/
+
+# for cache 
+__pycache__/
+*.pyc
+*.pyo
