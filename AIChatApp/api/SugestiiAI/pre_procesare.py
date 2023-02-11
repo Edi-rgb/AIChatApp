@@ -9,7 +9,7 @@ def remove_punctuations(token:str):
 
 def process(input_string:str):
     # o lista cu toate cuvintele care trebe scoase din inputul userului
-    cuvinte_de_stopare= open("./AIChatApp/SugestiiAI/cuvinte_de_stopare.csv","r").read().split(",")
+    cuvinte_de_stopare= open("./AIChatApp/api/SugestiiAI/cuvinte_de_stopare.csv","r").read().split(",")
     
     # facem toate literele mici si destructuram stringul in o lista de cuvinte/token-uri
     input_string = input_string.lower().split(" ")
@@ -24,3 +24,12 @@ def process(input_string:str):
 
 # print(process("Salutare, aceasta este pisicuta mea"))
 # # output: ['salut', 'pisic']
+
+print(process("Ce este un ONG?"))
+print(process("Ce face un ONG?"))
+
+print(process("Unde gasesc un ONG?"))
+print(process("Unde pot sa gasesc un ONG?"))
+
+print(process("Ce onguri exista in Romania?"))
+print(process("Cate ONG-uri exista in Romania?"))

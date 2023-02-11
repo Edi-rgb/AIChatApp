@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "CircularStd Black";
+    src: url(/static/fonts/CircularStd-Black.woff) format("woff");
+}
+@font-face {
+    font-family: "AlegreyaSans-Black";
+    src: url(/static/fonts/AlegreyaSans-Black.woff) format("woff");
+}
+@font-face {
+    font-family: "AlegreyaSans-Medium";
+    src: url(/static/fonts/AlegreyaSans-Medium.woff) format("woff");
+}
+
+:root {
+    --color1: rgb(64, 59, 203);
+    --color2: rgb(255, 255, 255);
+    --color3: rgb(9, 167, 219);
+    --color4: rgb(106, 223, 79);
+}
+* {
+    box-sizing: border-box;
+    font-family: "AlegreyaSans-Black";
+    position: relative;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color2);
+}
+
+header,
+.main0,
+footer {
+    display: flex;
+    padding: 2vh 0;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+    width: 100vw;
+}
+.main0 {
+    padding: 0 !important;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block !important;
+}
+.main1 {
+    min-height: 100vh;
+}
+.header0 {
+    flex-direction: row;
+    gap: 2vh;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 1vh 0.5vh rgba(0, 0, 0, 0.75);
+}
+header div {
+    font-size: 2rem;
+    color: var(--color2);
+    transition: 0.2s ease;
+    cursor: pointer;
+    border-bottom: 0.5vh solid transparent;
+}
+header div:hover {
+    padding: 0 2vh;
+    border-bottom: 0.5vh solid var(--color3);
+}
+header div:active {
+    padding: 0 2vh;
+    border-bottom: 0.5vh solid var(--color3);
+    transform: scale(0.9);
+}
+header div.active {
+    color: var(--color4);
+    pointer-events: none !important;
+}
+
+footer {
+    flex-direction: row;
+    background-color: var(--color1);
+}

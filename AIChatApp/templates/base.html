@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My ONG App</title>
+        <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+        {% block css_link %}{% endblock %}
+    </head>
+    <body>
+        <header class="header0">
+            <div class="{% block active_page1 %}Home{% endblock %}" onclick="window.location.href='/'">Acasă</div>
+            <div class="{% block active_page2 %}Home{% endblock %}" onclick="window.location.href='/about_us'">Despre Noi</div>
+            <div class="{% block active_page3 %}Home{% endblock %}" onclick="window.location.href='/ong'">Organizații</div>
+            <div class="{% block active_page4 %}Home{% endblock %}" onclick="window.location.href='/news'">Noutăți</div>
+            <div class="{% block active_page5 %}Home{% endblock %}" onclick="window.location.href='/statistics'">Statistici</div>
+            <div class="{% block active_page6 %}Home{% endblock %}" onclick="window.location.href='/contacts'">Contacte</div>
+        </header>
+        <main class="main0">
+            {% block main %}{% endblock %}
+            <footer>
+                <div>SOME INFO</div>
+                <div>SOME INFO</div>
+                <div>SOME INFO</div>
+            </footer>
+        </main>
+    </body>
+</html>
